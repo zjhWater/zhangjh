@@ -56,14 +56,15 @@
   .work-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
   .work h3{margin:0;font-size:24px;letter-spacing:-.01em}
   .work .tagline{color:var(--muted);margin:6px 0 0;font-size:15px}
-  .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 6px}
+  .shots{display:grid;grid-template-columns:1fr;gap:22px;margin:24px 0 6px}
   .shots figure{margin:0}
-  .shots img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);background:var(--bg)}
-  .shots figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
-  @media (max-width:640px){
-    .shots{grid-template-columns:1fr}
-    h1{font-size:30px}
+  .shots img{
+    width:100%;height:auto;display:block;border-radius:12px;
+    border:1px solid var(--line);background:#f6f7fb;
   }
+  .shots .pixel{image-rendering:pixelated}
+  .shots figcaption{font-size:13px;color:var(--muted);margin-top:9px;text-align:center}
+  @media (max-width:640px){ h1{font-size:30px} }
 
   .points{list-style:none;padding:0;margin:24px 0 0}
   .points li{position:relative;padding-left:22px;margin:9px 0;color:var(--ink);font-size:15px}
@@ -118,12 +119,12 @@
 
       <div class="shots">
         <figure>
-          <img src="assets/widget.png" alt="右下角的完整挂件：像素小人在桌前工作，下方是状态角标" loading="lazy">
-          <figcaption>完整挂件：小人、桌子、水杯、状态角标</figcaption>
+          <img class="pixel" src="assets/widget.png" alt="右下角的完整挂件：像素小人在桌前工作，桌上有水杯" loading="lazy">
+          <figcaption>完整挂件：小人、桌子、水杯，下方是状态角标</figcaption>
         </figure>
         <figure>
-          <img src="assets/mini.png" alt="迷你模式：输入框底部的一排杯子" loading="lazy">
-          <figcaption>迷你模式：收进输入框底部的一排杯子</figcaption>
+          <img src="assets/mini.png" alt="迷你模式：输入框底部的一排杯子，前三杯已满" loading="lazy">
+          <figcaption>迷你模式：收进输入框底部的一排杯子，点一下就是喝了一杯</figcaption>
         </figure>
       </div>
 
