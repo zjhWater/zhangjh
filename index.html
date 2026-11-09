@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>张继辉 · 作品集</title>
+<meta name="description" content="张继辉的个人作品集：DeepSeek Harness 上的像素风久坐与饮水提醒插件。">
+<style>
+  /* ---------- 基础 ---------- */
+  :root{
+    --ink:#1b2230; --muted:#6b7488; --line:#e6eaf2;
+    --bg:#fbfcfe; --card:#ffffff; --accent:#4f7fe0; --accent-soft:#eef3fd;
+    --code:#f4f6fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#e7eaf3; --muted:#98a2b3; --line:#262d3d;
+      --bg:#14181f; --card:#1a1f29; --accent:#7aa2f0; --accent-soft:#1e2738;
+      --code:#1e2430;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ---------- 顶部 ---------- */
+  header{padding:64px 0 8px}
+  .eyebrow{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  h1{font-size:38px;line-height:1.25;margin:10px 0 6px;letter-spacing:-.01em}
+  .role{color:var(--muted);font-size:16px;margin:0}
+  .links{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:10px;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:14px;
+  }
+  .btn:hover{text-decoration:none;border-color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{opacity:.92}
+
+  /* ---------- 区块 ---------- */
+  section{padding:56px 0 0}
+  h2{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 22px;font-weight:600}
+  .lead{font-size:17px;color:var(--ink);margin:0 0 28px;max-width:640px}
+
+  /* ---------- 作品卡 ---------- */
+  .work{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;
+  }
+  .work-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .work h3{margin:0;font-size:24px;letter-spacing:-.01em}
+  .work .tagline{color:var(--muted);margin:6px 0 0;font-size:15px}
+  .shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 6px}
+  .shots figure{margin:0}
+  .shots img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);background:var(--bg)}
+  .shots figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+  @media (max-width:640px){
+    .shots{grid-template-columns:1fr}
+    h1{font-size:30px}
+  }
+
+  .points{list-style:none;padding:0;margin:24px 0 0}
+  .points li{position:relative;padding-left:22px;margin:9px 0;color:var(--ink);font-size:15px}
+  .points li::before{
+    content:"";position:absolute;left:4px;top:11px;width:6px;height:6px;border-radius:2px;background:var(--accent);
+  }
+  .points b{font-weight:600}
+
+  .meta{display:flex;gap:22px;flex-wrap:wrap;margin:22px 0 0;padding-top:18px;border-top:1px solid var(--line)}
+  .meta div{font-size:13px;color:var(--muted)}
+  .meta strong{display:block;font-size:19px;color:var(--ink);font-weight:600;letter-spacing:-.01em}
+
+  .install{margin-top:22px}
+  .install pre{
+    margin:8px 0 0;padding:14px 16px;border-radius:12px;background:var(--code);
+    border:1px solid var(--line);overflow-x:auto;font-size:13.5px;line-height:1.6;
+  }
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+  .chip{font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+
+  /* ---------- 页脚 ---------- */
+  footer{padding:64px 0 56px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:64px}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <p class="eyebrow">Portfolio · 2026</p>
+  <h1>张继辉</h1>
+  <p class="role">遥感与地理空间分析 · 机器学习建模 · 现在也写 DSH 插件</p>
+  <div class="links">
+    <a class="btn primary" href="https://github.com/zjhWater" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.npmjs.com/package/dsh-stand-reminder" target="_blank" rel="noopener">npm</a>
+    <a class="btn" href="#work">作品</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="work">
+    <h2>作品</h2>
+    <p class="lead">把「每半小时站起来喝口水」做成了一个住在 DeepSeek Harness 里的小人。</p>
+
+    <article class="work">
+      <div class="work-head">
+        <h3>dsh-stand-reminder</h3>
+        <span class="chip">Pixel-art widget</span>
+      </div>
+      <p class="tagline">像素风的久坐与饮水提醒插件 · DeepSeek Harness 桌面端</p>
+
+      <div class="shots">
+        <figure>
+          <img src="assets/widget.png" alt="右下角的完整挂件：像素小人在桌前工作，下方是状态角标" loading="lazy">
+          <figcaption>完整挂件：小人、桌子、水杯、状态角标</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/mini.png" alt="迷你模式：输入框底部的一排杯子" loading="lazy">
+          <figcaption>迷你模式：收进输入框底部的一排杯子</figcaption>
+        </figure>
+      </div>
+
+      <ul class="points">
+        <li><b>不花一个 token。</b> 全部是页面内的计时器，不投递消息、不唤醒模型、不联网——这是它和「用定时任务提醒我」最本质的区别。</li>
+        <li><b>一天是一条状态机。</b> 未开机 / 工作中 / 离开 / 收工，四种状态各自对应一套动作和角标：敲键盘是工作，空椅子是离开，翘腿是收工。</li>
+        <li><b>像素场景是手画的 SVG。</b> 伸懒腰、举杯喝水、起身走出画面，都是 CSS 关键帧 + 分层切换，没有图片、没有渲染引擎，缩放到 300% 也不糊。</li>
+        <li><b>跨端口持久化。</b> DSH 每次启动端口都变，localStorage 会按 origin 隔离；插件自己注册了一条宿主路由，把配置和位置写进 <code>~/.dsh</code> 下的 JSON，重启后位置、大小、设置都还在。</li>
+        <li><b>能验证，不是「看起来能跑」。</b> jsdom 里跑真实 DOM 的 107 项断言，加上存档读写、水合恢复等 19 项，共 126 项，<code>npm test</code> 一条命令跑完。</li>
+      </ul>
+
+      <div class="meta">
+        <div><strong>126</strong>项断言</div>
+        <div><strong>9</strong>个发布文件</div>
+        <div><strong>85 kB</strong>打包体积</div>
+        <div><strong>MIT</strong>许可证</div>
+      </div>
+
+      <div class="install">
+        <div class="chips">
+          <span class="chip">Vanilla JS</span>
+          <span class="chip">Shadow DOM</span>
+          <span class="chip">SVG / CSS animation</span>
+          <span class="chip">Cordis plugin</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">jsdom</span>
+        </div>
+        <pre><code># 在 DeepSeek Harness 里装
+plugin_manager install_bundle  target = dsh-stand-reminder</code></pre>
+        <div class="links" style="margin-top:18px">
+          <a class="btn" href="https://github.com/zjhWater/BigWater4Workers" target="_blank" rel="noopener">源码</a>
+          <a class="btn" href="https://www.npmjs.com/package/dsh-stand-reminder" target="_blank" rel="noopener">npm 页面</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  © 2026 张继辉 · 用 HTML 和 CSS 手写，没有框架。
+</footer>
+
+</body>
+</html>
