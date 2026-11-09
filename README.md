@@ -46,6 +46,6 @@ assets/mini.png   迷你模式截图
 
 ## 改内容时看这里
 
-- 名字：搜 `张继辉`，共 3 处（`<h1>`、页脚、`<title>`）。
+- 名字：搜 `JH`，共 4 处（`<title>`、`<h1>`、`meta description`、页脚）。
 - 作品数据：搜 `126`（断言数）、`85 kB`（打包体积）这几个数字。
 - 配色：改 `:root` 里的 CSS 变量即可，深色模式在 `prefers-color-scheme: dark` 那一段。
